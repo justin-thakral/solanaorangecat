@@ -1,0 +1,687 @@
+body {
+    /* this applies to section change everything here for style if you want */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FFF3E0;
+    /* color change (website background color) */
+    color: #704214;
+    /* color change (section color)  */
+}
+
+/* Add scroll padding to account for the fixed header height */
+html {
+    scroll-padding-top: 120px;
+}
+
+html,
+body,
+header,
+section,
+footer {
+    /* overall makes sure the website dosen't overful horizontally  */
+    max-width: 100%;
+    /* Ensures the header matches the screen width */
+    overflow-x: hidden;
+    box-sizing: border-box;
+    /* Includes padding in the element's total width */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+header {
+    background-color: #FFE5B4;
+    /*  color change (header background color) */
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    /* inspired by DOGWIFHAT  */
+    position: absolute;
+    left: 50px;
+    height: 60px;
+}
+
+header h1 {
+    position: absolute;
+    left: 120px;
+    color: #704214;
+    /* color change (text after after logo) */
+}
+
+/* Navigation menu adjustments */
+header nav ul {
+    bottom: 27px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    position: absolute;
+    right: 50px;
+}
+
+header nav ul li a {
+    color: #704214;
+    /* color change (sub section color in header)*/
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFA500;
+    /* color change (hover over subsection in header) */
+    /* Brighter orange color on hover for emphasis */
+}
+
+/* Buy buttons */
+header nav ul li a.buy-button {
+    background-color: #FF9800;
+    /* color change (buy buttons)  */
+    color: white;
+    /*  color  change (buy button font color) */
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a.buy-button:hover {
+    background-color: #E67E22;
+    /* color change (buy botton hover) */
+}
+
+.menu-toggle {
+    /* code for dropdown menu. Only activates on screens smaller than 1050 */
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 229, 180, 0.95);
+    /* color change (background for dropdow)*/
+    z-index: 1001;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.5s ease forwards;
+    overflow-y: auto;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.dropdown-menu ul li {
+    width: 100%;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    width: 100%;
+    color: #704214;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 1.5em;
+    background-color: #FF9800;
+    /* color change (subsections on drop down)*/
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #E67E22;
+    /* color change (hover subsetion dropdown) */
+    transform: scale(1.05);
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    color: #704214;
+    /* color change (x on subsction) */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.dropdown-menu.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+main {
+    padding: 20px;
+    padding-top: 100px;
+    /* so top isn't in header */
+    text-align: center;
+}
+
+
+section {
+    background-color: #FFE5B4;
+    /* color change (section color) */
+    margin: 40px auto;
+    margin-top: 80px;
+    padding: 20px;
+    width: 55%;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+
+section h2 {
+    color: #FF9800;
+    /* color change (section header color) */
+}
+
+
+@keyframes flipCoin {
+
+    /* this is how i flip the coin. p1 */
+    0% {
+        transform: rotateX(0);
+    }
+
+    50% {
+        transform: rotateX(180deg);
+    }
+
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+.coin-container {
+    /* corretly posisitons coins */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.coin {
+    /* this is how i flip the coin. p2 */
+    animation: flipCoin 2s infinite;
+    /* only animation part i recommend changing if any */
+    width: 100px;
+    height: 100px;
+    background-image: url('catImages/transparent_final_coin.png');
+    /* change to ur pic here for flipping image */
+    background-size: cover;
+    display: block;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.left-image,
+.right-image,
+.left-video,
+.right-video {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    opacity: 0.9;
+    position: absolute;
+    overflow: visible;
+    /* Allows video to overflow if needed */
+    z-index: 10;
+}
+
+.left-video {
+    left: 10px;
+    /* Adjust as necessary */
+
+}
+
+.right-video {
+    right: 10px;
+}
+
+.left-image {
+    /* no images on this site, included if you'd rather one than a tiktok video */
+    left: 45px;
+    width: 220px;
+    height: auto;
+
+}
+
+.right-image {
+    right: 60px;
+    width: 200px;
+    height: auto;
+}
+
+
+
+.tiktok-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.social-icons img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+button {
+    background-color: #FF9800;
+    /* color change (section buttons) */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E67E22;
+    /* color change (section button hover)  */
+
+}
+
+footer {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* font change (footer) */
+    position: relative;
+    background-color: #FFE5B4;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 100px;
+}
+
+.cat-text {
+    /* this is the text in scrolling footer  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #704214;
+    /* color change (font) */
+    padding: 0 20px;
+    height: 100px;
+    line-height: 100px;
+}
+
+
+/* ensure the footer container does not collapse */
+.footer-container {
+    display: flex;
+    align-items: center;
+    height: 100px
+}
+
+/* can change the timing there to mess with speed*/
+.scrolling-wrapper {
+    display: flex;
+    animation: scroll 35s linear infinite;
+}
+
+.images {
+    display: inline-flex;
+}
+
+.images img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 1rem));
+    }
+}
+
+@media (min-width: 2050px) {
+
+    /* all these medias need no changes. Will dynamically adjust for you with different screen sizes. I'll describe what i'm doing whats but won't repeat */
+    .left-video {
+        /* increase video indent, looks a little better */
+        left: 100px;
+
+    }
+
+    .right-video {
+        right: 100px;
+    }
+
+    section {
+        width: 60%;
+        /* larger section size looks better */
+        font-size: 1.3em;
+        /* larger font size looks better  */
+    }
+}
+
+@media (min-width: 1750px) {
+    header {
+        font-size: 27.3px;
+        /* font size can be larger wiithout overlapping.  */
+    }
+
+    header h1 {
+        left: 100px;
+        font-size: 34.5px;
+    }
+
+    .header-logo {
+        left: 1.5%;
+
+    }
+
+    header nav ul {
+        gap: 12px;
+        /*  these get adjusted for overlap */
+        right: 20px;
+
+    }
+
+    .left-video {
+        left: 55px;
+
+    }
+
+    .right-video {
+        right: 55px;
+    }
+}
+
+@media (max-width: 1475px) {
+    header {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    header h1 {
+        left: 90px;
+        font-size: 22.5px;
+        /* now smaller font size to prevent overlap */
+    }
+
+    .header-logo {
+        left: 1.5%;
+
+    }
+
+    header nav ul {
+        gap: 11px;
+        right: 1.5%;
+
+    }
+
+    section {
+        width: 45%;
+    }
+
+    .left-video {
+        left: 30px;
+
+    }
+
+    .right-video {
+        right: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        font-size: 13.1px;
+    }
+
+    header h1 {
+        left: 85px;
+        font-size: 20.5px;
+    }
+
+    .header-logo {
+        left: 1.5%;
+
+    }
+
+    header nav ul {
+        gap: 4px;
+        right: 1.5%;
+
+    }
+
+    section {
+        width: 38%;
+    }
+
+    .left-video {
+        left: 30px;
+
+    }
+
+    .right-video {
+        right: 30px;
+    }
+}
+
+@media (max-width: 1050px) {
+    header h1 {
+        left: 80px;
+        font-size: 27.5px;
+    }
+
+    .header-not-button {
+        /* now width is too small so we get rid of sub sections. */
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        gap: 5px;
+        right: 25px;
+    }
+
+    section {
+        /* section is now left oriented instead of centered  */
+        width: 50%;
+
+        margin: 20px;
+    }
+
+    #tokenomics {
+        margin-top: 80px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 16px;
+    }
+
+    .coin,
+    .coin-container {
+        /* flpping coins look bad on this width so get rid of them*/
+        display: none;
+    }
+
+    .left-video,
+    .left-coin
+
+    /* only right video shows  */
+        {
+        display: none;
+    }
+
+    /* rezie social media icons that are too large */
+    .social-icons img {
+        height: 50px;
+    }
+
+    .header-logo {
+        left: 10px;
+        height: 60px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-not-button {
+        display: none;
+    }
+
+
+
+    header nav ul {
+        gap: 5px;
+        right: 2%;
+    }
+
+    section {
+        padding: 20px;
+        width: 85%;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    #tokenomics {
+        margin-top: 80px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 16px;
+    }
+
+    .coin,
+    .coin-container {
+        display: none;
+    }
+
+    .left-image,
+    .right-image,
+    .left-video,
+    /* right video too large now too  */
+    .right-video {
+        left: 2.5%;
+    }
+
+    .right-video {
+        display: none;
+    }
+
+    .social-icons img {
+        height: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.5em;
+        left: 75px;
+    }
+
+    .header-logo {
+        height: 55px;
+    }
+}
+
+@media (max-width: 420px) {
+    header h1 {
+        font-size: 1.1em;
+        left: 62.5px;
+    }
+
+    .header-logo {
+        height: 42.5px;
+    }
+
+    .menu-toggle {}
+
+    header nav ul {
+        gap: 3px;
+        right: 5px;
+    }
+
+    header nav ul li a.buy-button {
+        /* make slightly smaller */
+        padding: 5.5px 11px;
+        font-size: 0.925em;
+        width: auto;
+    }
+}

@@ -1,0 +1,17 @@
+    <div class="footer-container">
+      <div class="scrolling-wrapper">
+        <div class="images">
+          <img src="catImages/transparent_final_coin.png" alt="Orange Cat Coin" />
+          <span class="cat-text">$ORANGECAT$</span>
+          <img src="catImages/transparent_final_coin.png" alt="Orange Cat Coin" />
+          <span class="cat-text">$ORANGECAT$</span>
+          <img src="catImages/transparent_final_coin.png" alt="Orange Cat Coin" />
+          <span class="cat-text">$ORANGECAT$</span>
+          <img src="catImages/transparent_final_coin.png" alt="Orange Cat Coin" />
+          <span class="cat-text">$ORANGECAT$</span>
+          <img src="catImages/transparent_final_coin.png" alt="Orange Cat Coin" />
+          <span class="cat-text">$ORANGECAT$</span>
+          <img src="catImages/transparent_final_coin.png" alt="Orange Cat Coin" />
+          <span class="cat-text">$ORANGECAT$</span>
+          <img src="catImages/transparent_final_coin.png" alt="Orange Cat Coin" />
+        </div>
