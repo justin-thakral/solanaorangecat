@@ -227,6 +227,10 @@ section h2 {
 }
 
 
+input {
+display: none;
+}
+
 @keyframes flipCoin {
 
     /* this is how i flip the coin. p1 */

@@ -28,3 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+function copyToClipboard() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    navigator.clipboard.writeText(copyText.value).then(function() {
+        alert("Copied the text: " + copyText.value);
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}
