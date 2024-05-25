@@ -226,10 +226,39 @@ section h2 {
     /* color change (section header color) */
 }
 
+/* Add these styles to your existing styles.css */
 
-input {
+/* Add these styles to your existing styles.css */
+
+/* Add these styles to your existing styles.css */
+
+.copy_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.copy_container input {
 display: none;
 }
+
+.copy_container button {
+    background-color: #FF9800; /* Match with buy button color */
+    color: white; /* Match with buy button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.copy_container button:hover {
+    background-color: #E67E22; /* Match with buy button hover color */
+}
+
 
 @keyframes flipCoin {
 

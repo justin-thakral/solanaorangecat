@@ -30,12 +30,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function copyToClipboard() {
     var copyText = document.getElementById("myInput");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // For mobile devices
 
-    navigator.clipboard.writeText(copyText.value).then(function() {
-        alert("Copied the text: " + copyText.value);
+    // Create a temporary textarea element to hold the text
+    var tempTextArea = document.createElement("textarea");
+    tempTextArea.value = copyText.value;
+    document.body.appendChild(tempTextArea);
+
+    // Select the text in the temporary textarea and copy it
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the temporary textarea
+    navigator.clipboard.writeText(tempTextArea.value).then(function() {
+        alert("Copied the text: " + tempTextArea.value);
     }, function(err) {
         console.error('Could not copy text: ', err);
     });
+
+    // Remove the temporary textarea element
+    document.body.removeChild(tempTextArea);
 }
