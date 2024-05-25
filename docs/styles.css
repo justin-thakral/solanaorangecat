@@ -55,7 +55,7 @@ header {
 header h1 {
     position: absolute;
     left: 120px;
-    color: #704214;
+    color: #FF9800;
     /* color change (text after after logo) */
 }
 
@@ -360,7 +360,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: #704214;
+    color: #FF9800;
     /* color change (font) */
     padding: 0 20px;
     height: 100px;
@@ -553,11 +553,6 @@ footer {
 
         margin: 20px;
     }
-
-    #tokenomics {
-        margin-top: 80px;
-    }
-
     body {
         font-size: 14px;
     }
@@ -615,11 +610,6 @@ footer {
         box-sizing: border-box;
         margin-top: 20px;
     }
-
-    #tokenomics {
-        margin-top: 80px;
-    }
-
     body {
         font-size: 14px;
     }
@@ -652,7 +642,7 @@ footer {
 
 @media (max-width: 500px) {
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.6em;
         left: 75px;
     }
 
@@ -663,12 +653,11 @@ footer {
 
 @media (max-width: 420px) {
     header h1 {
-        font-size: 1.1em;
-        left: 62.5px;
+        left: 60px;
     }
 
     .header-logo {
-        height: 42.5px;
+        height: 40px;
     }
 
     .menu-toggle {}
@@ -680,8 +669,38 @@ footer {
 
     header nav ul li a.buy-button {
         /* make slightly smaller */
-        padding: 5.5px 11px;
-        font-size: 0.925em;
+        padding: 5.8px 11.6px;
+        font-size: 1em;
+        width: auto;
+    }
+}
+@media (max-width: 420px) {
+    header h1 {
+     font-size: 1.5em;    
+    }
+
+}
+@media (max-width: 385px) {
+    header h1 {
+        left: 55x;
+        font-size: 1.3em;
+    }
+
+    .header-logo {
+        height: 35x;
+    }
+
+    .menu-toggle {}
+
+    header nav ul {
+        gap: 3px;
+        right: 5px;
+    }
+
+    header nav ul li a.buy-button {
+        /* make slightly smaller */
+        padding: 5px 10px;
+        font-size: .95em;
         width: auto;
     }
 }
