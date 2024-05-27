@@ -682,11 +682,18 @@ footer {
     .header-logo {
         height: 55px;
     }
+    header nav ul li a.buy-button {
+        /* make slightly smaller */
+        padding: 6px 12px;
+        font-size: 1.1;
+        width: auto;
+    }
 }
 
 @media (max-width: 420px) {
     header h1 {
         left: 60px;
+        font-size: 1.5em;    
     }
 
     .header-logo {
@@ -702,16 +709,10 @@ footer {
 
     header nav ul li a.buy-button {
         /* make slightly smaller */
-        padding: 5.8px 11.6px;
-        font-size: 1em;
+        padding: 5.725px 11px;
+        font-size: .97em;
         width: auto;
     }
-}
-@media (max-width: 420px) {
-    header h1 {
-     font-size: 1.5em;    
-    }
-
 }
 @media (max-width: 385px) {
     header h1 {
@@ -732,8 +733,8 @@ footer {
 
     header nav ul li a.buy-button {
         /* make slightly smaller */
-        padding: 5px 10px;
-        font-size: .95em;
+        padding: 4.8px 9.6px;
+        font-size: .925em;
         width: auto;
     }
 }
