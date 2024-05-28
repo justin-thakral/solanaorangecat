@@ -48,13 +48,13 @@ header {
 .header-logo {
     /* inspired by DOGWIFHAT  */
     position: absolute;
-    left: 50px;
+    left: 25px;
     height: 60px;
 }
 
 header h1 {
     position: absolute;
-    left: 120px;
+    left: 95px;
     color: #FF9800;
     /* color change (text after after logo) */
 }
@@ -68,7 +68,7 @@ header nav ul {
     list-style-type: none;
     gap: 20px;
     position: absolute;
-    right: 50px;
+    right: 25px;
 }
 
 header nav ul li a {
